@@ -17,41 +17,49 @@ const Welcome = React.createClass({
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.point}>
-                    <Icon style={styles.pointIcon} name="circle" />
-                    <Text style={styles.pointText}>
-                        KeyPocket is a back-up system for your private keys. 
-                    </Text>
+                <View>
+                    <View style={styles.point}>
+                        <Icon style={styles.pointIcon} name="circle" />
+                        <Text style={styles.pointText}>
+                            KeyPocket is a back-up system for your private keys. 
+                        </Text>
+                    </View>
+                    <View style={styles.point}>
+                        <Icon style={styles.pointIcon} name="circle" />
+                        <Text style={styles.pointText}>
+                            Each key is broken into "shares", which are distributed across your devices. 
+                        </Text>
+                    </View>
+                    <View style={styles.point}>
+                        <Icon style={styles.pointIcon} name="circle" />
+                        <Text style={styles.pointText}>
+                            By recombining shares, the secret can be recovered.  
+                        </Text>
+                    </View>
+                    <View style={styles.point}>
+                        <Icon style={styles.pointIcon} name="circle" />
+                        <Text style={styles.pointText}>
+                            KeyPocket has not yet undergone a security audit, so please use at your own risk.
+                        </Text>
+                    </View>
+                    <View style={styles.point}>
+                        <Icon style={styles.pointIcon} name="circle" />
+                        <Text style={styles.pointText}>
+                            You can review the source code on&nbsp;                
+                            <Text 
+                                style={{color: 'blue'}}
+                                onPress={() => LinkingIOS.openURL("https://github.com/nlr/KeyPocket")}>
+                                GitHub
+                            </Text>. 
+                        </Text>
+                    </View>
                 </View>
-                <View style={styles.point}>
-                    <Icon style={styles.pointIcon} name="circle" />
-                    <Text style={styles.pointText}>
-                        Each key is broken into "shares", which are distributed across your devices. 
-                    </Text>
-                </View>
-                <View style={styles.point}>
-                    <Icon style={styles.pointIcon} name="circle" />
-                    <Text style={styles.pointText}>
-                        By recombining shares, the secret can be recovered.  
-                    </Text>
-                </View>
-                <View style={styles.point}>
-                    <Icon style={styles.pointIcon} name="circle" />
-                    <Text style={styles.pointText}>
-                        KeyPocket has not yet undergone a security audit, so please use at your own risk.
-                    </Text>
-                </View>
-                <View style={styles.point}>
-                    <Icon style={styles.pointIcon} name="circle" />
-                    <Text style={styles.pointText}>
-                        You can review the source code on&nbsp;                
-                        <Text 
-                            style={{color: 'blue'}}
-                            onPress={() => LinkingIOS.openURL("https://github.com/nlr/KeyPocket")}>
-                            GitHub
-                        </Text>. 
-                    </Text>
-                </View>
+                <TouchableHighlight 
+                    style={styles.button} 
+                    onPress={() => this.props.navigator.pop()}
+                    underlayColor="#01ddb1">
+                    <Text style={styles.buttonText}>Continue</Text>
+                </TouchableHighlight>
             </View>
         );
     }, 
@@ -63,6 +71,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         margin: 10, 
         flexDirection: "column", 
+        justifyContent: "space-between", 
     },
     header: {
         fontSize: 18, 

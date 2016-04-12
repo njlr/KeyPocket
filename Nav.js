@@ -19,7 +19,7 @@ function showWelcome(route, navigator) {
     navigator.push({
         index: (route.index || 0) + 1, 
         name: "Welcome", 
-        title: "Welcome", 
+        title: "Hello", 
         sceneConfig: Navigator.SceneConfigs.FloatFromBottom, 
     });
 }

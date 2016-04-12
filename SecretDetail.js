@@ -34,7 +34,7 @@ const SecretDetail = React.createClass({
                 index: 1, 
                 name: "SecretOpen", 
                 title: this.props.secretSharing.name, 
-                sceneConfig: Navigator.SceneConfigs.FloatFromRight, 
+                sceneConfig: Navigator.SceneConfigs.FloatFromBottom, 
                 passProps: {
                     realm: this.props.realm,
                     secretSharing: this.props.secretSharing, 

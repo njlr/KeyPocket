@@ -107,6 +107,14 @@ const NavigationBarRouteMapper = {
                     </Text>
                 </TouchableOpacity>);
         }
+        if (route.sceneConfig === Navigator.SceneConfigs.FloatFromBottom) {
+            return (
+                <TouchableOpacity style={styles.leftButton} onPress={() => navigator.pop()}>
+                    <Text style={styles.leftButtonText}>
+                        Done
+                    </Text>
+                </TouchableOpacity>);
+        }
         return (
             <TouchableOpacity style={styles.leftButton} onPress={() => navigator.pop()}>
                 <Text style={styles.leftButtonText}>
