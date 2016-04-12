@@ -15,11 +15,11 @@ function showHomeScreen(route, navigator) {
     });
 }
 
-function showDisclaimer(route, navigator) {
+function showWelcome(route, navigator) {
     navigator.push({
         index: (route.index || 0) + 1, 
-        name: "Disclaimer", 
-        title: "Disclaimer", 
+        name: "Welcome", 
+        title: "Welcome", 
         sceneConfig: Navigator.SceneConfigs.FloatFromBottom, 
     });
 }
@@ -44,4 +44,4 @@ function showRecoverScreen(route, navigator, callback) {
     });
 }
 
-module.exports = { showHomeScreen, showDisclaimer, showCreateScreen, showRecoverScreen };
+module.exports = { showHomeScreen, showWelcome, showCreateScreen, showRecoverScreen };

@@ -45,7 +45,7 @@ const Home = React.createClass({
                 dataSource: dataSource.cloneWithRows(secretSharings), 
             }); 
         });
-        Nav.showDisclaimer(this.props.route, this.props.navigator);
+        Nav.showWelcome(this.props.route, this.props.navigator);
     }, 
     componentWillUnmount() {
         this.props.realm.removeAllListeners();
@@ -69,8 +69,8 @@ const Home = React.createClass({
         return (
             <View style={styles.container}>
                 <ListView 
-                dataSource={this.state.dataSource}
-                renderRow={this.renderRow} />
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderRow} />
            </View>);
     }, 
 });

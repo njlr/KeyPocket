@@ -19,7 +19,7 @@ const Home = require("./Home.js");
 const SecretDetail = require("./SecretDetail.js");
 const SecretOpen = require("./SecretOpen.js");
 const Create = require("./Create.js");
-const Disclaimer = require("./Disclaimer.js");
+const Welcome = require("./Welcome.js");
 const Recover = require("./Recover.js");
 const InvalidScan = require("./InvalidScan.js");
 const SecretShare = require("./SecretShare.js");
@@ -46,8 +46,8 @@ const KeyPocketApp = React.createClass({
             scene = <InvalidScan navigator={navigator} {...route.passProps}/>;
         } else if (route.name == "SecretShare") {
             scene = <SecretShare navigator={navigator} {...route.passProps}/>;
-        } else if (route.name = "Disclaimer") {
-            scene = <Disclaimer navigator={navigator} {...route.passProps}/>;
+        } else if (route.name = "Welcome") {
+            scene = <Welcome navigator={navigator} {...route.passProps}/>;
         }
         if (scene) {
             return (
